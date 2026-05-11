@@ -1,0 +1,32 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# build
+dist
+.build
+
+# logs
+*.log
+
+# env files
+.env
+.env.*
+
+# database
+.tmp
+.cache
+
+# sqlite database (VERY IMPORTANT)
+.data
+*.db
+*.sqlite
+*.sqlite3
+
+# uploads (optional)
+public/uploads
+
+# OS
+.DS_Store
+Thumbs.db
