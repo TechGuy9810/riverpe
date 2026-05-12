@@ -24,8 +24,6 @@ dist
 *.sqlite
 *.sqlite3
 
-# uploads (optional)
-public/uploads
 
 # OS
 .DS_Store
