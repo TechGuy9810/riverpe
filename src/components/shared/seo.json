@@ -16,11 +16,33 @@
       "type": "text",
       "required": true
     },
-    "shareImage": {
+    "keywords": {
+      "type": "string"
+    },
+    "canonicalURL": {
+      "type": "string"
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogImage": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "metaRobots": {
+      "type": "enumeration",
+      "default": "index,follow",
+      "enum": [
+        "index,follow",
+        "noindex,follow",
+        "noindex,nofollow"
+      ]
     }
   }
 }
