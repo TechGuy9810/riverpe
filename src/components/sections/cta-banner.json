@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_cta_banners",
+  "info": {
+    "displayName": "cta-banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "cards.cta-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

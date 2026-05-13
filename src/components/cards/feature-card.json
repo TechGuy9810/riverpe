@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_cards_feature_cards",
+  "info": {
+    "displayName": "feature-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptions": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

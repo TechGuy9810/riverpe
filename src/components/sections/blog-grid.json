@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_blog_grids",
+  "info": {
+    "displayName": "blog-grid"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "showFeaturedOnly": {
+      "type": "boolean",
+      "default": false
+    },
+    "viewAllLink": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
