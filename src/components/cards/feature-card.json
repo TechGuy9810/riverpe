@@ -11,12 +11,14 @@
     "descriptions": {
       "type": "text"
     },
-    "icon": {
-      "type": "string"
-    },
     "link": {
       "type": "component",
       "component": "shared.button",
+      "repeatable": false
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
       "repeatable": false
     }
   },

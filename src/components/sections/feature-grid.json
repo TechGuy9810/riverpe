@@ -15,6 +15,13 @@
       "type": "component",
       "component": "cards.feature-card",
       "repeatable": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "simple-grid",
+        "split-stats"
+      ]
     }
   },
   "config": {}

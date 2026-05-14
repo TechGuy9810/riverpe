@@ -8,6 +8,9 @@
     "title": {
       "type": "string"
     },
+    "subTitle": {
+      "type": "string"
+    },
     "description": {
       "type": "blocks"
     },
@@ -20,6 +23,19 @@
         "videos",
         "audios"
       ]
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
     }
   },
   "config": {}

@@ -21,7 +21,7 @@
     "seo": {
       "type": "component",
       "component": "shared.seo",
-      "repeatable": true
+      "repeatable": false
     },
     "sections": {
       "type": "dynamiczone",
@@ -29,7 +29,8 @@
         "sections.cta-banner",
         "sections.hero",
         "sections.feature-grid",
-        "sections.blog-grid"
+        "sections.blog-grid",
+        "sections.cta-section"
       ]
     }
   }

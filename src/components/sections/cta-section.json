@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_cta_sections",
+  "info": {
+    "displayName": "cta-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

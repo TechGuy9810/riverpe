@@ -22,6 +22,11 @@
     },
     "openInNewTab": {
       "type": "boolean"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
     }
   },
   "config": {}

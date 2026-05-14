@@ -21,7 +21,7 @@ export interface CardsFeatureCard extends Struct.ComponentSchema {
   };
   attributes: {
     descriptions: Schema.Attribute.Text;
-    icon: Schema.Attribute.String;
+    icon: Schema.Attribute.Component<'shared.icon', false>;
     link: Schema.Attribute.Component<'shared.button', false>;
     title: Schema.Attribute.String;
   };
@@ -54,6 +54,18 @@ export interface SectionsCtaBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_cta_sections';
+  info: {
+    displayName: 'cta-section';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsFeatureGrid extends Struct.ComponentSchema {
   collectionName: 'components_sections_feature_grids';
   info: {
@@ -63,6 +75,7 @@ export interface SectionsFeatureGrid extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     features: Schema.Attribute.Component<'cards.feature-card', true>;
     title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['simple-grid', 'split-stats']>;
   };
 }
 
@@ -72,11 +85,14 @@ export interface SectionsHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
+    button: Schema.Attribute.Component<'shared.button', true>;
     description: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    layout: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
+    subTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -88,11 +104,25 @@ export interface SharedButton extends Struct.ComponentSchema {
   };
   attributes: {
     href: Schema.Attribute.String;
+    icon: Schema.Attribute.Component<'shared.icon', false>;
     label: Schema.Attribute.String;
     openInNewTab: Schema.Attribute.Boolean;
     variant: Schema.Attribute.Enumeration<
       ['primary', 'secondary', 'outline', 'ghost']
     >;
+  };
+}
+
+export interface SharedIcon extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icons';
+  info: {
+    displayName: 'icon';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    size: Schema.Attribute.Enumeration<['sm', 'md', 'lg', 'xl']> &
+      Schema.Attribute.DefaultTo<'md'>;
   };
 }
 
@@ -128,9 +158,11 @@ declare module '@strapi/strapi' {
       'cards.feature-card': CardsFeatureCard;
       'sections.blog-grid': SectionsBlogGrid;
       'sections.cta-banner': SectionsCtaBanner;
+      'sections.cta-section': SectionsCtaSection;
       'sections.feature-grid': SectionsFeatureGrid;
       'sections.hero': SectionsHero;
       'shared.button': SharedButton;
+      'shared.icon': SharedIcon;
       'shared.seo': SharedSeo;
     }
   }

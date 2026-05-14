@@ -591,9 +591,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.hero',
         'sections.feature-grid',
         'sections.blog-grid',
+        'sections.cta-section',
       ]
     >;
-    seo: Schema.Attribute.Component<'shared.seo', true>;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

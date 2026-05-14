@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_icons",
+  "info": {
+    "displayName": "icon"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "default": "md",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    }
+  },
+  "config": {}
+}
