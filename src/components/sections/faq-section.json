@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_faq_sections",
+  "info": {
+    "displayName": "faq-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

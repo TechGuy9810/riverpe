@@ -592,6 +592,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.feature-grid',
         'sections.blog-grid',
         'sections.cta-section',
+        'sections.card-grid',
+        'sections.faq-section',
       ]
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;

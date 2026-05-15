@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_card_items",
+  "info": {
+    "displayName": "card-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat-item",
+      "repeatable": true
+    },
+    "bullets": {
+      "type": "component",
+      "component": "shared.bullet-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -19,6 +19,7 @@
     "@arshiash80/strapi-plugin-iconhub": "^1.3.1",
     "@strapi/plugin-cloud": "5.45.0",
     "@strapi/plugin-users-permissions": "5.45.0",
+    "@strapi/provider-upload-cloudinary": "^5.46.0",
     "@strapi/strapi": "5.45.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",

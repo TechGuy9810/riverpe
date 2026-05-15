@@ -42,6 +42,21 @@ export interface SectionsBlogGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCardGrid extends Struct.ComponentSchema {
+  collectionName: 'components_sections_card_grids';
+  info: {
+    displayName: 'card-grid';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.card-item', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<
+      ['feature-grid', 'partner-program', 'testimonial-stats', 'minimal-cards']
+    >;
+  };
+}
+
 export interface SectionsCtaBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_cta_banners';
   info: {
@@ -61,6 +76,18 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'shared.button', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_faq_sections';
+  info: {
+    displayName: 'faq-section';
+  };
+  attributes: {
+    faqs: Schema.Attribute.Component<'shared.faq-item', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -97,6 +124,16 @@ export interface SectionsHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBulletItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_bullet_items';
+  info: {
+    displayName: 'bullet-item';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttons';
   info: {
@@ -110,6 +147,32 @@ export interface SharedButton extends Struct.ComponentSchema {
     variant: Schema.Attribute.Enumeration<
       ['primary', 'secondary', 'outline', 'ghost']
     >;
+  };
+}
+
+export interface SharedCardItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_items';
+  info: {
+    displayName: 'card-item';
+  };
+  attributes: {
+    bullets: Schema.Attribute.Component<'shared.bullet-item', true>;
+    description: Schema.Attribute.Blocks;
+    icon: Schema.Attribute.Component<'shared.icon', false>;
+    label: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'shared.stat-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_items';
+  info: {
+    displayName: 'faq-item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Blocks;
+    question: Schema.Attribute.String;
   };
 }
 
@@ -151,19 +214,36 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_stat_items';
+  info: {
+    displayName: 'stat-item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cards.cta-card': CardsCtaCard;
       'cards.feature-card': CardsFeatureCard;
       'sections.blog-grid': SectionsBlogGrid;
+      'sections.card-grid': SectionsCardGrid;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cta-section': SectionsCtaSection;
+      'sections.faq-section': SectionsFaqSection;
       'sections.feature-grid': SectionsFeatureGrid;
       'sections.hero': SectionsHero;
+      'shared.bullet-item': SharedBulletItem;
       'shared.button': SharedButton;
+      'shared.card-item': SharedCardItem;
+      'shared.faq-item': SharedFaqItem;
       'shared.icon': SharedIcon;
       'shared.seo': SharedSeo;
+      'shared.stat-item': SharedStatItem;
     }
   }
 }
