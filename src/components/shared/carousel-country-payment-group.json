@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_carousel_country_payment_groups",
+  "info": {
+    "displayName": "carousel-country-payment-group"
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "methods": {
+      "type": "component",
+      "component": "shared.carousel-payment-method-item",
+      "repeatable": true
+    },
+    "badge": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

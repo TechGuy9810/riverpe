@@ -32,7 +32,8 @@
         "sections.blog-grid",
         "sections.cta-section",
         "sections.card-grid",
-        "sections.faq-section"
+        "sections.faq-section",
+        "sections.carousel-payment-method"
       ]
     }
   }

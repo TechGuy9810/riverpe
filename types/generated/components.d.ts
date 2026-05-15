@@ -57,6 +57,21 @@ export interface SectionsCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCarouselPaymentMethod extends Struct.ComponentSchema {
+  collectionName: 'components_sections_carousel_payment_methods';
+  info: {
+    displayName: 'carousel-payment-method';
+  };
+  attributes: {
+    countryGroups: Schema.Attribute.Component<
+      'shared.carousel-country-payment-group',
+      true
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsCtaBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_cta_banners';
   info: {
@@ -165,6 +180,36 @@ export interface SharedCardItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCarouselCountryPaymentGroup
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_carousel_country_payment_groups';
+  info: {
+    displayName: 'carousel-country-payment-group';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    methods: Schema.Attribute.Component<
+      'shared.carousel-payment-method-item',
+      true
+    >;
+  };
+}
+
+export interface SharedCarouselPaymentMethodItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_carousel_payment_method_items';
+  info: {
+    displayName: 'carousel-payment-method-item';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icon', false>;
+    name: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_faq_items';
   info: {
@@ -232,6 +277,7 @@ declare module '@strapi/strapi' {
       'cards.feature-card': CardsFeatureCard;
       'sections.blog-grid': SectionsBlogGrid;
       'sections.card-grid': SectionsCardGrid;
+      'sections.carousel-payment-method': SectionsCarouselPaymentMethod;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cta-section': SectionsCtaSection;
       'sections.faq-section': SectionsFaqSection;
@@ -240,6 +286,8 @@ declare module '@strapi/strapi' {
       'shared.bullet-item': SharedBulletItem;
       'shared.button': SharedButton;
       'shared.card-item': SharedCardItem;
+      'shared.carousel-country-payment-group': SharedCarouselCountryPaymentGroup;
+      'shared.carousel-payment-method-item': SharedCarouselPaymentMethodItem;
       'shared.faq-item': SharedFaqItem;
       'shared.icon': SharedIcon;
       'shared.seo': SharedSeo;

@@ -594,6 +594,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.cta-section',
         'sections.card-grid',
         'sections.faq-section',
+        'sections.carousel-payment-method',
       ]
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_carousel_payment_method_items",
+  "info": {
+    "displayName": "carousel-payment-method-item"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
+    },
+    "tag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
