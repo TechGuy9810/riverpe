@@ -15,6 +15,11 @@
       "type": "component",
       "component": "shared.button",
       "repeatable": true
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
     }
   },
   "config": {}

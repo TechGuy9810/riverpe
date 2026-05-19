@@ -95,6 +95,7 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'shared.button', true>;
+    icon: Schema.Attribute.Component<'shared.icon', false>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
