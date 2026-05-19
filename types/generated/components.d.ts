@@ -69,6 +69,7 @@ export interface SectionsCarouselPaymentMethod extends Struct.ComponentSchema {
       'shared.carousel-country-payment-group',
       true
     >;
+    stat: Schema.Attribute.Component<'shared.stat-item', false>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };

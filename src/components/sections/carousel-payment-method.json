@@ -15,6 +15,11 @@
       "type": "component",
       "component": "shared.carousel-country-payment-group",
       "repeatable": true
+    },
+    "stat": {
+      "type": "component",
+      "component": "shared.stat-item",
+      "repeatable": false
     }
   },
   "config": {}
