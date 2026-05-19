@@ -15,6 +15,11 @@
       "type": "component",
       "component": "cards.cta-card",
       "repeatable": true
+    },
+    "eyebrow": {
+      "type": "component",
+      "component": "shared.eyebrow",
+      "repeatable": false
     }
   },
   "config": {}

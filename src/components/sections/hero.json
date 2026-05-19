@@ -36,6 +36,13 @@
       "type": "component",
       "component": "shared.button",
       "repeatable": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "long",
+        "short"
+      ]
     }
   },
   "config": {}

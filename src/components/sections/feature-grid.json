@@ -20,8 +20,14 @@
       "type": "enumeration",
       "enum": [
         "simple-grid",
-        "split-stats"
+        "split-stats",
+        "simple-grid-advance"
       ]
+    },
+    "eyebrow": {
+      "type": "component",
+      "component": "shared.eyebrow",
+      "repeatable": false
     }
   },
   "config": {}

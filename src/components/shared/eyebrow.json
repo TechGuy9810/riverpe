@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_eyebrows",
+  "info": {
+    "displayName": "eyebrow"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icon",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

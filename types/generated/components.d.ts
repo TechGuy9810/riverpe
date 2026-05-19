@@ -34,6 +34,7 @@ export interface SectionsBlogGrid extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.Component<'shared.eyebrow', false>;
     limit: Schema.Attribute.Integer;
     showFeaturedOnly: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -49,6 +50,7 @@ export interface SectionsCardGrid extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'shared.card-item', true>;
+    eyebrow: Schema.Attribute.Component<'shared.eyebrow', false>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<
@@ -80,6 +82,7 @@ export interface SectionsCtaBanner extends Struct.ComponentSchema {
   attributes: {
     cards: Schema.Attribute.Component<'cards.cta-card', true>;
     description: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.Component<'shared.eyebrow', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -115,9 +118,12 @@ export interface SectionsFeatureGrid extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Blocks;
+    eyebrow: Schema.Attribute.Component<'shared.eyebrow', false>;
     features: Schema.Attribute.Component<'cards.feature-card', true>;
     title: Schema.Attribute.String;
-    variant: Schema.Attribute.Enumeration<['simple-grid', 'split-stats']>;
+    variant: Schema.Attribute.Enumeration<
+      ['simple-grid', 'split-stats', 'simple-grid-advance']
+    >;
   };
 }
 
@@ -136,6 +142,7 @@ export interface SectionsHero extends Struct.ComponentSchema {
     layout: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
     subTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['long', 'short']>;
   };
 }
 
@@ -207,6 +214,17 @@ export interface SharedCarouselPaymentMethodItem
     name: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     tag: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEyebrow extends Struct.ComponentSchema {
+  collectionName: 'components_shared_eyebrows';
+  info: {
+    displayName: 'eyebrow';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icon', false>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -288,6 +306,7 @@ declare module '@strapi/strapi' {
       'shared.card-item': SharedCardItem;
       'shared.carousel-country-payment-group': SharedCarouselCountryPaymentGroup;
       'shared.carousel-payment-method-item': SharedCarouselPaymentMethodItem;
+      'shared.eyebrow': SharedEyebrow;
       'shared.faq-item': SharedFaqItem;
       'shared.icon': SharedIcon;
       'shared.seo': SharedSeo;
