@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_footer_bottoms",
+  "info": {
+    "displayName": "footer-bottom"
+  },
+  "options": {},
+  "attributes": {
+    "license_text": {
+      "type": "blocks"
+    },
+    "support_note": {
+      "type": "blocks"
+    },
+    "socials": {
+      "type": "component",
+      "component": "shared.social-link",
+      "repeatable": true
+    },
+    "about": {
+      "type": "component",
+      "component": "cards.cta-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -241,6 +241,19 @@ export interface SharedFaqItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooterBottom extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_bottoms';
+  info: {
+    displayName: 'footer-bottom';
+  };
+  attributes: {
+    about: Schema.Attribute.Component<'cards.cta-card', false>;
+    license_text: Schema.Attribute.Blocks;
+    socials: Schema.Attribute.Component<'shared.social-link', true>;
+    support_note: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SharedIcon extends Struct.ComponentSchema {
   collectionName: 'components_shared_icons';
   info: {
@@ -279,6 +292,18 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_social_links';
+  info: {
+    displayName: 'social link';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icon', false>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedStatItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_stat_items';
   info: {
@@ -310,8 +335,10 @@ declare module '@strapi/strapi' {
       'shared.carousel-payment-method-item': SharedCarouselPaymentMethodItem;
       'shared.eyebrow': SharedEyebrow;
       'shared.faq-item': SharedFaqItem;
+      'shared.footer-bottom': SharedFooterBottom;
       'shared.icon': SharedIcon;
       'shared.seo': SharedSeo;
+      'shared.social-link': SharedSocialLink;
       'shared.stat-item': SharedStatItem;
     }
   }
